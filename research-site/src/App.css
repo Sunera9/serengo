@@ -1,6 +1,27 @@
-/* App.css */
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
+  background-color: #fff;
+  color: #111;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: #111;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+footer {
+  background-color: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
 }
