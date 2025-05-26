@@ -10,7 +10,8 @@ import LiteratureReview from "./components/LiteratureReview";
 import ProblemsSolutions from "./components/problemsolution";
 import ResearchObjectives from "./components/objectives";
 import MethodologySection from "./components/methodology";
-import TechnologiesSection from "./components/tech";
+import TechnologiesSection from "./components/tech"
+import "./App.css";
 
 function App() {
   return (
@@ -26,9 +27,6 @@ function App() {
       <Downloads />
       <Team />
       <ContactUs />
-      {/* <Objectives /> */}
-      {/* <Methodology /> */}
-      {/* <Tools /> */}
       <Footer />
     </>
   );
