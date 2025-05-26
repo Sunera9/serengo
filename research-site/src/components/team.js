@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Typography, Box } from "@mui/material";
-import dinukaImage from "../images/dinuka.png"; // Use your correct local image path
+import dinukaImage from "../images/dinuka.png";
+import manjithaImage from "../images/manjitha.jpg"; 
 
 const members = [
   {
@@ -21,7 +22,7 @@ const members = [
   {
     name: "Manjitha Kumarasinghe",
     role: "Member",
-    image: "",
+    image: manjithaImage,
   },
   {
     name: "Dunisha Sandeepani",

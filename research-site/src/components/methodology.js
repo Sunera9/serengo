@@ -1,5 +1,6 @@
 // MethodologySection.jsx
 import React from "react";
+import methodologyImage from "../images/systemcomponents.jpg"; 
 
 const MethodologySection = () => {
   const styles = {
@@ -136,7 +137,7 @@ const MethodologySection = () => {
         <div style={styles.methodologyImageContainer}>
           <div style={styles.methodologyImageWrapper}>
             <img
-              src="research-site\src\images\system-components.jpg"
+              src={methodologyImage}
               alt="System Components Diagram"
               style={styles.methodologyImage}
               onMouseEnter={handleImageHover}
