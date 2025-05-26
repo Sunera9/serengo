@@ -39,10 +39,10 @@ const Team = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(to bottom, #e3f2fd, #ffffff)",
+        background: "linear-gradient(to bottom,rgb(181, 216, 250),rgb(181, 216, 250))",
         py: 8,
         px: 3,
-        minHeight: "100vh",
+        minHeight: "auto",
       }}
     >
       <Box textAlign="center" mb={6}>
@@ -69,8 +69,8 @@ const Team = () => {
               src={member.image}
               alt={member.name}
               sx={{
-                width: 140,
-                height: 140,
+                width: 200,
+                height: 200,
                 mx: "auto",
                 mb: 2,
                 boxShadow: "0 6px 18px rgba(0,0,0,0.15)",

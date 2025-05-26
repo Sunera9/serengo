@@ -6,7 +6,6 @@ import Milestones from "./components/milestones";
 import Downloads from "./components/documents";
 import Team from "./components/team";
 import ContactUs from "./components/contact";
-
 import "./App.css";
 
 function App() {
@@ -18,9 +17,6 @@ function App() {
       <Downloads />
       <Team />
       <ContactUs />
-      {/* <Objectives /> */}
-      {/* <Methodology /> */}
-      {/* <Tools /> */}
       <Footer />
     </>
   );

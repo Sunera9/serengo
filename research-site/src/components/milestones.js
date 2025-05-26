@@ -89,7 +89,7 @@ const milestones = [
 
 const styles = {
   container: {
-    background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+    background: "linear-gradient(135deg, rgb(181, 216, 250) 0%, rgb(181, 216, 250) 100%)",
     minHeight: "100vh",
     paddingTop: "4rem",
     paddingBottom: "4rem",
@@ -101,7 +101,7 @@ const styles = {
   headerIcon: {
     width: "80px",
     height: "80px",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1976d2 0%, #1976d2 100%)",
     margin: "0 auto 2rem auto",
     display: "flex",
     alignItems: "center",
@@ -111,7 +111,7 @@ const styles = {
     boxShadow: "0 8px 32px rgba(102, 126, 234, 0.3)",
   },
   mainTitle: {
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1976d2 0%, #1976d2 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
@@ -128,7 +128,7 @@ const styles = {
   },
   decorativeLine: {
     height: "4px",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1976d2 0%, #1976d2 100%)",
     borderRadius: "2px",
     width: "100px",
     margin: "2rem auto",
@@ -140,7 +140,7 @@ const styles = {
       },
     },
     "& .MuiTimelineConnector-root": {
-      background: "linear-gradient(180deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(180deg, #1976d2 0%, #1976d2 100%)",
       width: "3px",
     },
   },
@@ -179,7 +179,7 @@ const styles = {
   dateChip: {
     fontWeight: "600",
     borderRadius: "20px",
-    background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+    background: "linear-gradient(135deg, #1976d2 0%, #1976d2 100%)",
     color: "white",
   },
   marksChip: {
@@ -247,7 +247,7 @@ const Milestones = () => {
             Project Milestones
           </Typography>
           <Typography sx={styles.subtitle}>
-            Track your academic journey through each milestone with detailed timelines, 
+            Track your academic journey through each milestone with detailed timelines,
             comprehensive descriptions, and mark allocations for successful project completion.
           </Typography>
           <Box sx={styles.decorativeLine} />
@@ -259,7 +259,7 @@ const Milestones = () => {
             {milestones.map((milestone, index) => (
               <TimelineItem key={index}>
                 <TimelineOppositeContent sx={{ py: 2, px: 2 }}>
-                  <Chip 
+                  <Chip
                     label={milestone.date}
                     sx={styles.dateChip}
                     size="medium"
@@ -267,7 +267,7 @@ const Milestones = () => {
                 </TimelineOppositeContent>
 
                 <TimelineSeparator>
-                  <TimelineDot 
+                  <TimelineDot
                     sx={{
                       ...styles.timelineDot,
                       bgcolor: milestone.color,
@@ -289,7 +289,7 @@ const Milestones = () => {
                   >
                     <CardContent sx={{ p: 3 }}>
                       <Box sx={styles.cardHeader}>
-                        <Avatar 
+                        <Avatar
                           sx={{
                             ...styles.iconAvatar,
                             bgcolor: milestone.color,
@@ -308,12 +308,8 @@ const Milestones = () => {
 
                       <Box sx={styles.cardFooter}>
                         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-                          <Star sx={{ color: "#ffd700", fontSize: "1.2rem" }} />
-                          <Typography variant="body2" sx={{ fontWeight: "bold", color: "#2c3e50" }}>
-                            Quality Focus
-                          </Typography>
                         </Box>
-                        <Chip 
+                        <Chip
                           label={`${milestone.marks} marks`}
                           sx={{
                             ...styles.marksChip,
@@ -332,55 +328,74 @@ const Milestones = () => {
         </Box>
 
         {/* Summary Stats */}
-        <Box sx={styles.statsContainer}>
-          <Card sx={styles.statsCard}>
-            <CardContent>
-              <Grid container spacing={4}>
-                <Grid item xs={12} md={4}>
-                  <Box sx={styles.statItem}>
-                    <Avatar sx={styles.statIcon}>
-                      <CheckCircle />
-                    </Avatar>
-                    <Typography variant="h3" sx={styles.statNumber}>
-                      {milestones.length}
-                    </Typography>
-                    <Typography sx={styles.statLabel}>
-                      Total Milestones
-                    </Typography>
-                  </Box>
-                </Grid>
-                
-                <Grid item xs={12} md={4}>
-                  <Box sx={styles.statItem}>
-                    <Avatar sx={styles.statIcon}>
-                      <Star />
-                    </Avatar>
-                    <Typography variant="h3" sx={styles.statNumber}>
-                      {totalMarks}
-                    </Typography>
-                    <Typography sx={styles.statLabel}>
-                      Total Marks Available
-                    </Typography>
-                  </Box>
-                </Grid>
-                
-                <Grid item xs={12} md={4}>
-                  <Box sx={styles.statItem}>
-                    <Avatar sx={styles.statIcon}>
-                      <CalendarToday />
-                    </Avatar>
-                    <Typography variant="h3" sx={styles.statNumber}>
-                      9
-                    </Typography>
-                    <Typography sx={styles.statLabel}>
-                      Months Duration
-                    </Typography>
-                  </Box>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
+        <Box sx={{
+          maxWidth: 500,
+          margin: '2rem auto',   // centers horizontally with vertical margin
+          padding: '1.5rem 2rem',
+          borderRadius: '16px',
+          background: 'linear-gradient(135deg, #d9e7ff 0%, #f0f5ff 100%)',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.1)',
+        }}>
+          <Grid container spacing={4} justifyContent="center" alignItems="center" textAlign="center">
+            <Grid item xs={4} sm={4} md={4}>
+              <Box>
+                <Avatar sx={{
+                  bgcolor: 'primary.main',
+                  margin: '0 auto 8px',
+                  width: 48,
+                  height: 48,
+                }}>
+                  <CheckCircle />
+                </Avatar>
+                <Typography variant="h4" fontWeight="bold">
+                  {milestones.length}
+                </Typography>
+                <Typography color="text.secondary" fontSize="0.9rem">
+                  Total Milestones
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={4} sm={4} md={4}>
+              <Box>
+                <Avatar sx={{
+                  bgcolor: 'primary.main',
+                  margin: '0 auto 8px',
+                  width: 48,
+                  height: 48,
+                }}>
+                  <Star />
+                </Avatar>
+                <Typography variant="h4" fontWeight="bold">
+                  {totalMarks}
+                </Typography>
+                <Typography color="text.secondary" fontSize="0.9rem">
+                  Total Marks Available
+                </Typography>
+              </Box>
+            </Grid>
+
+            <Grid item xs={4} sm={4} md={4}>
+              <Box>
+                <Avatar sx={{
+                  bgcolor: 'primary.main',
+                  margin: '0 auto 8px',
+                  width: 48,
+                  height: 48,
+                }}>
+                  <CalendarToday />
+                </Avatar>
+                <Typography variant="h4" fontWeight="bold">
+                  9
+                </Typography>
+                <Typography color="text.secondary" fontSize="0.9rem">
+                  Months Duration
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
         </Box>
+
       </Container>
     </Box>
   );
