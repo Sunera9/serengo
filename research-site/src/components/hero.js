@@ -322,7 +322,7 @@ export default function Hero() {
                 e.target.style.background = "rgba(255, 255, 255, 0.1)";
               }}
             >
-              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🛡️</div>
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🎤</div>
               <div
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
@@ -330,7 +330,7 @@ export default function Hero() {
                   fontWeight: "600",
                 }}
               >
-                Safety Monitor
+                Hate Speech Detection
               </div>
             </div>
 
@@ -514,7 +514,7 @@ export default function Hero() {
                     }}
                   >
                     <div style={{ fontSize: "2rem", marginBottom: "8px" }}>
-                      🛡️
+                    🎤
                     </div>
                     <div
                       style={{
@@ -523,7 +523,7 @@ export default function Hero() {
                         fontWeight: "600",
                       }}
                     >
-                      Safety
+                      Speech
                     </div>
                   </div>
 
