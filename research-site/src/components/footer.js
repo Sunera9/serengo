@@ -6,30 +6,30 @@ const Footer = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
 
   const styles = {
-     footer: {
-    background: 'linear-gradient(135deg, #d3e6ff 0%, #a9cfff 100%)',
-    position: 'relative',
-    overflow: 'hidden',
-    padding: '4rem 4rem 2rem', 
-  },
-  container: {
-    maxWidth: '100%', 
-    margin: '0 auto',
-    padding: '0 2rem', 
-    position: 'relative',
-    zIndex: 1,
-  },
-  mainContent: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '3rem',
-    justifyContent: 'space-between', 
-    marginBottom: '3rem',
-  },
-  section: {
-    flex: '1 1 320px',  
-    minWidth: '280px',
-  },
+    footer: {
+      background: 'linear-gradient(135deg, #d3e6ff 0%, #a9cfff 100%)',
+      position: 'relative',
+      overflow: 'hidden',
+      padding: '4rem 4rem 2rem',
+    },
+    container: {
+      maxWidth: '100%',
+      margin: '0 auto',
+      padding: '0 2rem',
+      position: 'relative',
+      zIndex: 1,
+    },
+    mainContent: {
+      display: 'flex',
+      flexWrap: 'wrap',
+      gap: '3rem',
+      justifyContent: 'space-between',
+      marginBottom: '3rem',
+    },
+    section: {
+      flex: '1 1 320px',
+      minWidth: '280px',
+    },
     logo: {
       fontSize: '2rem',
       fontWeight: '800',
@@ -212,8 +212,8 @@ const Footer = () => {
               </div>
               <div style={{ marginBottom: '1rem' }}>
                 <span style={styles.contactLabel}>✉️ Email</span>
-                <br/>
-                <br/>
+                <br />
+                <br />
                 <a
                   href="mailto:serengo@gmail.com"
                   style={{

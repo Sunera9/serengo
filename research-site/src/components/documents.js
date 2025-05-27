@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 const documents = [
-  { title: "Project Charter", type: "Document",file: "https://drive.google.com/drive/u/2/folders/1sntDi7R2_LcioHigrKU5yOp3f0ueq2IX"  },
-  { title: "Project Proposal", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1V6csEt7xKGWgYN9r3a9tn6zophvQBiz8"  },
-  { title: "Project Proposal", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/15Hn2DWcyia1HyXq-8r1C3LWBC6u4FD94"  },
-  { title: "Progress Presentation I", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/11oJMTFJ4v75EUxdflm7sx0SICTXjM4cX"  },
-  { title: "Progress Presentation II", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/17x7rVqUMFFmxnnF6_5P56zRKgojIzYDK"  },
-  { title: "Research Paper", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1Cz-vnbA6-UtkRqZk5S8ZjCVEYBpM61r6"  },
-  { title: "Final Report", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1AXdFGI7Kk7jGhc5-q2jTZwffjWcXpyjK"  },
-  { title: "Log Book", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1yQ1UTCvKI6LI5gdlDgMlFaFu7AXoDm2m"  },
+  { title: "Project Charter", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1sntDi7R2_LcioHigrKU5yOp3f0ueq2IX" },
+  { title: "Project Proposal", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1V6csEt7xKGWgYN9r3a9tn6zophvQBiz8" },
+  { title: "Project Proposal", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/15Hn2DWcyia1HyXq-8r1C3LWBC6u4FD94" },
+  { title: "Progress Presentation I", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/11oJMTFJ4v75EUxdflm7sx0SICTXjM4cX" },
+  { title: "Progress Presentation II", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/17x7rVqUMFFmxnnF6_5P56zRKgojIzYDK" },
+  { title: "Research Paper", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1Cz-vnbA6-UtkRqZk5S8ZjCVEYBpM61r6" },
+  { title: "Final Report", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1AXdFGI7Kk7jGhc5-q2jTZwffjWcXpyjK" },
+  { title: "Log Book", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1yQ1UTCvKI6LI5gdlDgMlFaFu7AXoDm2m" },
 ];
 
 const Downloads = () => {
@@ -191,7 +191,7 @@ const Downloads = () => {
           Research Documents
         </h1>
         <p style={styles.subtitle}>
-          Access comprehensive research documents, presentations, and reports 
+          Access comprehensive research documents, presentations, and reports
           for your academic and professional reference
         </p>
         <div style={styles.decorativeLine} />
@@ -261,7 +261,7 @@ const Downloads = () => {
               Total Resources
             </div>
           </div>
-          
+
           <div style={styles.statItem}>
             <div style={styles.statNumber}>
               {documentTypeCount}
@@ -270,7 +270,7 @@ const Downloads = () => {
               Documents
             </div>
           </div>
-          
+
           <div style={styles.statItem}>
             <div style={styles.statNumber}>
               {presentationCount}
