@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "./components/hero";
-import About from "./components/about";
 import Footer from "./components/footer";
 import Milestones from "./components/milestones";
 import Downloads from "./components/documents";

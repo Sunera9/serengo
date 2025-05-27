@@ -5,6 +5,7 @@ import manjithaImage from "../images/manjitha.jpg";
 import erandaImage from "../images/eranda.jpg";
 import mayanthaImange from '../images/mayantha.jpg';
 import dunishaImage from '../images/dunisha.jpg';
+import chathushkiImage from '../images/chathushki.jpg';
 
 const members = [
   {
@@ -15,7 +16,7 @@ const members = [
   {
     name: "Ms. Chathushki Chathumali",
     role: "Co-Supervisor",
-    image: "",
+    image: chathushkiImage,
   },
   {
     name: "Mayantha Bsnayaka​",

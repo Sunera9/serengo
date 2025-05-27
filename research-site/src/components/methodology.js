@@ -1,153 +1,264 @@
 // MethodologySection.jsx
 import React from "react";
+import {
+  Box,
+  Container,
+  Typography,
+  Card,
+  CardContent,
+  Grid,
+  Fade,
+  Chip,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+import { styled } from "@mui/material/styles";
+import {
+  Psychology,
+  DatasetOutlined,
+  ModelTraining,
+  CloudQueue,
+} from "@mui/icons-material";
 import methodologyImage from "../images/systemcomponents.jpg";
 
+// Styled components
+const StyledSection = styled(Box)(({ theme }) => ({
+  background: `linear-gradient(135deg, 
+    ${theme.palette.grey[50]} 0%, 
+    ${theme.palette.common.white} 50%, 
+    ${theme.palette.primary.light}08 100%)`,
+  minHeight: "100vh",
+  padding: theme.spacing(8, 0),
+  position: "relative",
+  overflow: "hidden",
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    background: `radial-gradient(circle at 20% 20%, ${theme.palette.primary.light}15 0%, transparent 50%),
+                 radial-gradient(circle at 80% 80%, ${theme.palette.secondary.light}15 0%, transparent 50%)`,
+    pointerEvents: "none",
+  },
+}));
+
+const StyledCard = styled(Card)(({ theme }) => ({
+  background: `linear-gradient(145deg, 
+    ${theme.palette.common.white} 0%, 
+    ${theme.palette.grey[50]} 100%)`,
+  borderRadius: theme.spacing(2),
+  boxShadow: `0 10px 40px -10px ${theme.palette.primary.main}20,
+              0 0 0 1px ${theme.palette.grey[200]}`,
+  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+  position: "relative",
+  overflow: "hidden",
+  "&:hover": {
+    transform: "translateY(-8px)",
+    boxShadow: `0 20px 60px -10px ${theme.palette.primary.main}30,
+                0 0 0 1px ${theme.palette.primary.light}50`,
+  },
+  "&::before": {
+    content: '""',
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: "4px",
+    background: `linear-gradient(90deg, 
+      ${theme.palette.primary.main}, 
+      ${theme.palette.secondary.main})`,
+  },
+}));
+
+const StyledImageContainer = styled(Box)(({ theme }) => ({
+  position: "relative",
+  borderRadius: theme.spacing(2),
+  overflow: "hidden",
+  cursor: "pointer",
+}));
+
+const StyledImage = styled("img")(({ theme }) => ({
+  height: "700px",
+  width: "900px",
+  borderRadius: theme.spacing(2),
+  transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+  boxShadow: `0 20px 40px -15px ${theme.palette.common.black}30`,
+  alignSelf: "center",
+}));
+
+const TechChip = styled(Chip)(({ theme }) => ({
+  margin: theme.spacing(0.5),
+  background: `linear-gradient(45deg, ${theme.palette.primary.light}, ${theme.palette.primary.main})`,
+  color: theme.palette.common.white,
+  fontWeight: 600,
+  "&:hover": {
+    background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.dark})`,
+    transform: "translateY(-2px)",
+  },
+  transition: "all 0.2s ease",
+}));
+
+const IconWrapper = styled(Box)(({ theme }) => ({
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  width: 40,
+  height: 40,
+  borderRadius: "50%",
+  background: `linear-gradient(135deg, ${theme.palette.primary.light}, ${theme.palette.primary.main})`,
+  marginRight: theme.spacing(2),
+  color: theme.palette.common.white,
+  boxShadow: `0 4px 12px ${theme.palette.primary.main}40`,
+}));
+
 const MethodologySection = () => {
-  const styles = {
-    methodologySection: {
-      background: "linear-gradient(135deg, #f9fafb 0%, #ffffff 100%)",
-      minHeight: "100vh",
-      padding: "6rem 1.5rem",
-      "@media (min-width: 768px)": {
-        padding: "6rem 5rem",
-      },
-    },
-    methodologyContainer: {
-      maxWidth: "80rem",
-      margin: "0 auto",
-      display: "grid",
-      gridTemplateColumns: "1fr",
-      gap: "3.5rem",
-      alignItems: "center",
-      "@media (min-width: 768px)": {
-        gridTemplateColumns: "1fr 1fr",
-      },
-    },
-    methodologyContent: {
-      width: "100%",
-    },
-    methodologyTitle: {
-      fontSize: "2.5rem",
-      fontWeight: "700",
-      color: "#111827",
-      marginBottom: "2rem",
-      letterSpacing: "-0.025em",
-      lineHeight: "1.1",
-      "@media (min-width: 768px)": {
-        fontSize: "3.75rem",
-      },
-    },
-    methodologyCard: {
-      background: "#ffffff",
-      borderRadius: "0.75rem",
-      boxShadow:
-        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-      padding: "2rem",
-      border: "1px solid #f3f4f6",
-      "@media (max-width: 767px)": {
-        padding: "1.5rem",
-      },
-    },
-    methodologyText: {
-      fontSize: "1.125rem",
-      color: "#374151",
-      lineHeight: "1.75",
-      margin: "0",
-      "@media (max-width: 767px)": {
-        fontSize: "1rem",
-      },
-    },
-    methodologyImageContainer: {
-      display: "flex",
-      justifyContent: "center",
-    },
-    methodologyImageWrapper: {
-      position: "relative",
-    },
-    methodologyImage: {
-      borderRadius: "0.75rem",
-      boxShadow:
-        "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
-      width: "100%",
-      maxWidth: "28rem",
-      transition: "box-shadow 0.3s ease",
-      cursor: "pointer",
-    },
-  };
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // Handle image hover effect
-  const handleImageHover = (e) => {
-    e.target.style.boxShadow =
-      "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)";
-  };
+  const technologies = [
+    "YOLOv5",
+    "LSTM Networks",
+    "Random Forest",
+    "XGBoost",
+    "AWS EC2",
+    "Flask",
+    "FastText",
+    "SMOTE",
+  ];
 
-  const handleImageLeave = (e) => {
-    e.target.style.boxShadow =
-      "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)";
-  };
-
-  // Handle image error
   const handleImageError = (e) => {
     e.target.src =
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23f3f4f6'/%3E%3Ctext x='200' y='150' text-anchor='middle' fill='%236b7280' font-family='Arial' font-size='16'%3ESystem Components Diagram%3C/text%3E%3C/svg%3E";
   };
 
   return (
-    <section style={styles.methodologySection}>
-      <div style={styles.methodologyContainer}>
-        {/* Text Content */}
-        <div style={styles.methodologyContent}>
-          <h2 style={styles.methodologyTitle}>🧠 Methodology</h2>
-          <div style={styles.methodologyCard}>
-            <p style={styles.methodologyText}>
-              The research follows a systematic methodology combining data
-              collection, preprocessing, and advanced machine learning
-              techniques to solve critical issues in Sri Lanka's tourism
-              industry. Diverse datasets were gathered, including annotated
-              images of traditional Sri Lankan foods, extensive historical
-              weather data from multiple locations, pricing information for
-              adventure activities, and Sinhala speech samples from various
-              sources. Each dataset underwent rigorous cleaning and
-              preprocessing steps, such as missing value imputation, outlier
-              removal, text normalization, and class balancing using techniques
-              like SMOTE and back-translation to improve data quality and
-              diversity. Feature engineering methods, including FastText
-              embeddings for textual data and cyclical encoding for time-series
-              weather data, were applied to enhance model inputs. For modeling,
-              state-of-the-art deep learning architectures such as YOLOv5 were
-              fine-tuned for efficient real-time food recognition, while stacked
-              LSTM networks with attention mechanisms were employed for accurate
-              coastal weather forecasting. Random Forest regression was selected
-              to optimize dynamic pricing for adventure tourism due to its high
-              predictive performance, and an ensemble voting classifier
-              combining XGBoost, Gradient Boosting, SVM, and Random Forest
-              models was developed for robust Sinhala speech classification. The
-              models were trained with appropriate hyperparameter tuning, early
-              stopping, and validated using metrics like precision, recall, and
-              R² scores. Finally, the system was deployed through a Python Flask
-              backend integrated with AWS cloud services—including EC2 for
-              hosting, S3 for storage, and Transcribe for speech-to-text
-              functionality—enabling scalable, real-time processing to enhance
-              the tourist experience across multiple domains.
-            </p>
-          </div>
-        </div>
+    <StyledSection>
+      <Container maxWidth="xl">
+        <Fade in timeout={1000}>
+          <Grid container spacing={6} alignItems="center">
+            {/* Content Section */}
+            <Grid item xs={12} md={7}>
+              <Box sx={{ position: "relative", zIndex: 1 }}>
+                {/* Header */}
+                <Box sx={{ mb: 4 }}>
+                  <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                    <IconWrapper>
+                      <Psychology />
+                    </IconWrapper>
+                    <Typography
+                      variant="h2"
+                      component="h2"
+                      sx={{
+                        fontWeight: 800,
+                        background: `linear-gradient(135deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+                        backgroundClip: "text",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent",
+                        fontSize: { xs: "2.5rem", md: "3.5rem" },
+                        letterSpacing: "-0.02em",
+                      }}
+                    >
+                      Methodology
+                    </Typography>
+                  </Box>
+                  
+                  {/* Technology Tags */}
+                  <Box sx={{ mb: 3 }}>
+                    {technologies.map((tech, index) => (
+                      <TechChip
+                        key={index}
+                        label={tech}
+                        size="small"
+                        icon={
+                          index < 2 ? <ModelTraining /> : 
+                          index < 4 ? <DatasetOutlined /> : 
+                          <CloudQueue />
+                        }
+                      />
+                    ))}
+                  </Box>
+                </Box>
 
-        {/* Image */}
-        <div style={styles.methodologyImageContainer}>
-          <div style={styles.methodologyImageWrapper}>
-            <img
-              src={methodologyImage}
-              alt="System Components Diagram"
-              style={styles.methodologyImage}
-              onMouseEnter={handleImageHover}
-              onMouseLeave={handleImageLeave}
-              onError={handleImageError}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+                {/* Main Content Card */}
+                <StyledCard>
+                  <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        fontSize: { xs: "1rem", md: "1.125rem" },
+                        lineHeight: 1.8,
+                        color: theme.palette.text.secondary,
+                        textAlign: "justify",
+                        "& strong": {
+                          color: theme.palette.primary.main,
+                          fontWeight: 600,
+                        },
+                      }}
+                    >
+                      The research follows a <strong>systematic methodology</strong> combining data
+                      collection, preprocessing, and advanced machine learning
+                      techniques to solve critical issues in Sri Lanka's tourism
+                      industry. Diverse datasets were gathered, including annotated
+                      images of traditional Sri Lankan foods, extensive historical
+                      weather data from multiple locations, pricing information for
+                      adventure activities, and Sinhala speech samples from various
+                      sources.
+                      <br /><br />
+                      Each dataset underwent <strong>rigorous cleaning and preprocessing</strong> steps,
+                      such as missing value imputation, outlier removal, text
+                      normalization, and class balancing using techniques like SMOTE
+                      and back-translation to improve data quality and diversity.
+                      Feature engineering methods, including FastText embeddings for
+                      textual data and cyclical encoding for time-series weather
+                      data, were applied to enhance model inputs.
+                      <br /><br />
+                      For modeling, <strong>state-of-the-art deep learning architectures</strong> such
+                      as YOLOv5 were fine-tuned for efficient real-time food
+                      recognition, while stacked LSTM networks with attention
+                      mechanisms were employed for accurate coastal weather
+                      forecasting. Random Forest regression was selected to optimize
+                      dynamic pricing for adventure tourism due to its high
+                      predictive performance, and an ensemble voting classifier
+                      combining XGBoost, Gradient Boosting, SVM, and Random Forest
+                      models was developed for robust Sinhala speech classification.
+                      <br /><br />
+                      Finally, the system was deployed through a <strong>Python Flask backend</strong> integrated with AWS cloud services—including EC2 for
+                      hosting, S3 for storage, and Transcribe for speech-to-text
+                      functionality—enabling scalable, real-time processing to
+                      enhance the tourist experience across multiple domains.
+                    </Typography>
+                  </CardContent>
+                </StyledCard>
+              </Box>
+            </Grid>
+
+            {/* Image Section */}
+            <Grid item xs={12} md={5}>
+              <Fade in timeout={1500}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    position: "relative",
+                    zIndex: 1,
+                  }}
+                >
+                  <StyledImageContainer>
+                    <StyledImage
+                      src={methodologyImage}
+                      alt="System Components Diagram"
+                      onError={handleImageError}
+                    />
+                  </StyledImageContainer>
+                </Box>
+              </Fade>
+            </Grid>
+          </Grid>
+        </Fade>
+      </Container>
+    </StyledSection>
   );
 };
 
