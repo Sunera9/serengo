@@ -142,7 +142,7 @@ export default function Hero() {
                 fontWeight: "600",
               }}
             >
-              🚀 Next-Gen Tourism Technology
+              🚀 Next-Gen Tourism AI Platform
             </span>
           </div>
 
@@ -161,7 +161,7 @@ export default function Hero() {
               transition: "all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s",
             }}
           >
-            AI-Powered Food Recognition
+            Welcome to
             <span
               style={{
                 display: "block",
@@ -170,7 +170,7 @@ export default function Hero() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              for Tourists
+              Serengo
             </span>
           </h1>
 
@@ -186,8 +186,8 @@ export default function Hero() {
               transition: "all 1s cubic-bezier(0.4, 0, 0.2, 1) 0.6s",
             }}
           >
-            Identify Sri Lankan dishes using deep learning and receive
-            personalized health suggestions while you explore the island.
+            Your comprehensive AI-powered travel companion for Sri Lanka. From
+            food recognition to safety, weather insights to adventure planning.
           </p>
 
           <div
@@ -201,7 +201,7 @@ export default function Hero() {
             }}
           >
             <button
-              onClick={() => scrollToSection("domain")}
+              onClick={() => scrollToSection("features")}
               style={{
                 background: "linear-gradient(135deg, #667eea, #764ba2)",
                 color: "white",
@@ -228,7 +228,7 @@ export default function Hero() {
                   "0 8px 25px rgba(102, 126, 234, 0.4)";
               }}
             >
-              🔍 Explore the Research
+              🔍 Explore Features
             </button>
 
             <button
@@ -260,26 +260,38 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Feature highlights */}
+          {/* Four main features */}
           <div
             style={{
               marginTop: "48px",
-              display: "flex",
-              gap: "32px",
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "24px",
               opacity: isVisible ? 1 : 0,
               transform: isVisible ? "translateY(0)" : "translateY(20px)",
               transition: "all 1s cubic-bezier(0.4, 0, 0.2, 1) 1s",
             }}
           >
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  fontSize: "2rem",
-                  marginBottom: "8px",
-                }}
-              >
-                🤖
-              </div>
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(20px)",
+                borderRadius: "16px",
+                padding: "20px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "translateY(-5px)";
+                e.target.style.background = "rgba(255, 255, 255, 0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "translateY(0)";
+                e.target.style.background = "rgba(255, 255, 255, 0.1)";
+              }}
+            >
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🍽️</div>
               <div
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
@@ -287,18 +299,30 @@ export default function Hero() {
                   fontWeight: "600",
                 }}
               >
-                AI Recognition
+                Food Detection
               </div>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  fontSize: "2rem",
-                  marginBottom: "8px",
-                }}
-              >
-                🍽️
-              </div>
+
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(20px)",
+                borderRadius: "16px",
+                padding: "20px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "translateY(-5px)";
+                e.target.style.background = "rgba(255, 255, 255, 0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "translateY(0)";
+                e.target.style.background = "rgba(255, 255, 255, 0.1)";
+              }}
+            >
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🛡️</div>
               <div
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
@@ -306,18 +330,30 @@ export default function Hero() {
                   fontWeight: "600",
                 }}
               >
-                Local Cuisine
+                Safety Monitor
               </div>
             </div>
-            <div style={{ textAlign: "center" }}>
-              <div
-                style={{
-                  fontSize: "2rem",
-                  marginBottom: "8px",
-                }}
-              >
-                🏥
-              </div>
+
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(20px)",
+                borderRadius: "16px",
+                padding: "20px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "translateY(-5px)";
+                e.target.style.background = "rgba(255, 255, 255, 0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "translateY(0)";
+                e.target.style.background = "rgba(255, 255, 255, 0.1)";
+              }}
+            >
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🏖️</div>
               <div
                 style={{
                   color: "rgba(255, 255, 255, 0.9)",
@@ -325,13 +361,44 @@ export default function Hero() {
                   fontWeight: "600",
                 }}
               >
-                Health Insights
+                Beach Activities
+              </div>
+            </div>
+
+            <div
+              style={{
+                background: "rgba(255, 255, 255, 0.1)",
+                backdropFilter: "blur(20px)",
+                borderRadius: "16px",
+                padding: "20px",
+                border: "1px solid rgba(255, 255, 255, 0.2)",
+                textAlign: "center",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.transform = "translateY(-5px)";
+                e.target.style.background = "rgba(255, 255, 255, 0.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.transform = "translateY(0)";
+                e.target.style.background = "rgba(255, 255, 255, 0.1)";
+              }}
+            >
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>🏔️</div>
+              <div
+                style={{
+                  color: "rgba(255, 255, 255, 0.9)",
+                  fontSize: "0.9rem",
+                  fontWeight: "600",
+                }}
+              >
+                Adventure Pricing
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Content - Visual Element */}
+        {/* Right Content - App Showcase */}
         <div
           style={{
             position: "relative",
@@ -373,6 +440,7 @@ export default function Hero() {
                   flexDirection: "column",
                 }}
               >
+                {/* Header */}
                 <div
                   style={{
                     background: "rgba(255, 255, 255, 0.95)",
@@ -384,21 +452,15 @@ export default function Hero() {
                 >
                   <div
                     style={{
-                      fontSize: "4rem",
-                      marginBottom: "12px",
-                    }}
-                  >
-                    🍛
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "1.1rem",
-                      fontWeight: "600",
-                      color: "#333",
+                      fontSize: "1.5rem",
+                      fontWeight: "800",
+                      background: "linear-gradient(135deg, #667eea, #764ba2)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
                       marginBottom: "8px",
                     }}
                   >
-                    Rice & Curry
+                    Serengo
                   </div>
                   <div
                     style={{
@@ -406,48 +468,155 @@ export default function Hero() {
                       color: "#666",
                     }}
                   >
-                    Traditional Sri Lankan
+                    Your AI Travel Companion
                   </div>
                 </div>
 
+                {/* Feature grid */}
                 <div
                   style={{
-                    background: "rgba(255, 255, 255, 0.1)",
-                    borderRadius: "16px",
-                    padding: "16px",
+                    display: "grid",
+                    gridTemplateColumns: "1fr 1fr",
+                    gap: "12px",
                     flex: 1,
-                    backdropFilter: "blur(20px)",
                   }}
                 >
                   <div
                     style={{
-                      color: "white",
-                      fontSize: "0.9rem",
-                      fontWeight: "600",
-                      marginBottom: "12px",
+                      background: "rgba(255, 255, 255, 0.1)",
+                      borderRadius: "16px",
+                      padding: "16px",
+                      backdropFilter: "blur(20px)",
+                      textAlign: "center",
                     }}
                   >
-                    🔍 Analysis Complete
+                    <div style={{ fontSize: "2rem", marginBottom: "8px" }}>
+                      🍛
+                    </div>
+                    <div
+                      style={{
+                        color: "white",
+                        fontSize: "0.8rem",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Food ID
+                    </div>
                   </div>
+
                   <div
                     style={{
-                      color: "rgba(255, 255, 255, 0.8)",
-                      fontSize: "0.8rem",
-                      lineHeight: "1.4",
+                      background: "rgba(255, 255, 255, 0.1)",
+                      borderRadius: "16px",
+                      padding: "16px",
+                      backdropFilter: "blur(20px)",
+                      textAlign: "center",
                     }}
                   >
-                    Ingredients detected: Rice, lentils, vegetables, coconut...
+                    <div style={{ fontSize: "2rem", marginBottom: "8px" }}>
+                      🛡️
+                    </div>
+                    <div
+                      style={{
+                        color: "white",
+                        fontSize: "0.8rem",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Safety
+                    </div>
+                  </div>
+
+                  <div
+                    style={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                      borderRadius: "16px",
+                      padding: "16px",
+                      backdropFilter: "blur(20px)",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div style={{ fontSize: "2rem", marginBottom: "8px" }}>
+                      🌊
+                    </div>
+                    <div
+                      style={{
+                        color: "white",
+                        fontSize: "0.8rem",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Beach
+                    </div>
+                  </div>
+
+                  <div
+                    style={{
+                      background: "rgba(255, 255, 255, 0.1)",
+                      borderRadius: "16px",
+                      padding: "16px",
+                      backdropFilter: "blur(20px)",
+                      textAlign: "center",
+                    }}
+                  >
+                    <div style={{ fontSize: "2rem", marginBottom: "8px" }}>
+                      💰
+                    </div>
+                    <div
+                      style={{
+                        color: "white",
+                        fontSize: "0.8rem",
+                        fontWeight: "600",
+                      }}
+                    >
+                      Pricing
+                    </div>
+                  </div>
+                </div>
+
+                {/* Status indicator */}
+                <div
+                  style={{
+                    background: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "16px",
+                    padding: "12px",
+                    marginTop: "12px",
+                    backdropFilter: "blur(20px)",
+                    textAlign: "center",
+                  }}
+                >
+                  <div
+                    style={{
+                      color: "#4ade80",
+                      fontSize: "0.8rem",
+                      fontWeight: "600",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "8px",
+                        height: "8px",
+                        background: "#4ade80",
+                        borderRadius: "50%",
+                        animation: "pulse 2s ease-in-out infinite",
+                      }}
+                    />
+                    AI Active
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Floating elements */}
+          {/* Floating elements representing different features */}
           <div
             style={{
               position: "absolute",
-              top: "10%",
+              top: "5%",
               right: "-20px",
               background: "rgba(255, 255, 255, 0.2)",
               backdropFilter: "blur(20px)",
@@ -462,6 +631,21 @@ export default function Hero() {
           <div
             style={{
               position: "absolute",
+              top: "25%",
+              left: "-40px",
+              background: "rgba(255, 255, 255, 0.2)",
+              backdropFilter: "blur(20px)",
+              borderRadius: "16px",
+              padding: "12px",
+              animation: "float 3s ease-in-out infinite 0.5s",
+            }}
+          >
+            <span style={{ fontSize: "1.5rem" }}>🌤️</span>
+          </div>
+
+          <div
+            style={{
+              position: "absolute",
               bottom: "20%",
               left: "-30px",
               background: "rgba(255, 255, 255, 0.2)",
@@ -471,7 +655,22 @@ export default function Hero() {
               animation: "float 3s ease-in-out infinite 1s",
             }}
           >
-            <span style={{ fontSize: "1.5rem" }}>🌶️</span>
+            <span style={{ fontSize: "1.5rem" }}>🏄‍♂️</span>
+          </div>
+
+          <div
+            style={{
+              position: "absolute",
+              bottom: "5%",
+              right: "-25px",
+              background: "rgba(255, 255, 255, 0.2)",
+              backdropFilter: "blur(20px)",
+              borderRadius: "16px",
+              padding: "12px",
+              animation: "float 3s ease-in-out infinite 1.5s",
+            }}
+          >
+            <span style={{ fontSize: "1.5rem" }}>🎒</span>
           </div>
         </div>
       </div>
@@ -498,7 +697,7 @@ export default function Hero() {
             fontWeight: "500",
           }}
         >
-          Scroll to explore
+          Discover all features
         </span>
         <div
           style={{
@@ -555,7 +754,7 @@ export default function Hero() {
         }
 
         @media (max-width: 768px) {
-          .hero-grid {
+          .hero-content {
             grid-template-columns: 1fr !important;
             gap: 40px !important;
             text-align: center;
@@ -564,6 +763,11 @@ export default function Hero() {
           .phone-mockup {
             width: 250px !important;
             height: 500px !important;
+          }
+
+          .features-grid {
+            grid-template-columns: 1fr 1fr !important;
+            gap: 16px !important;
           }
         }
       `}</style>
