@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import XIcon from '@mui/icons-material/X';
 
 const Footer = () => {
   const [hoveredIcon, setHoveredIcon] = useState(null);
@@ -123,10 +124,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'Twitter', icon: 'M23 3a10.9 10.9 0 01-3.14 1.53 ...', url: 'https://twitter.com' },
+    { name: 'Twitter', icon: 'M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z', url: 'https://twitter.com' },
     { name: 'Facebook', icon: 'M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z', url: 'https://facebook.com' },
-    { name: 'Instagram', icon: 'M16 12A4 4 0 1112 8a4 4 0 014 4zM12 2.2c2.7 0 3 0 4.1.1 ...', url: 'https://instagram.com' },
-    { name: 'LinkedIn', icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 ...', url: 'https://linkedin.com' },
+    { name: 'Instagram', icon: 'M16 12A4 4 0 1112 8a4 4 0 014 4zm0-5.2a1.2 1.2 0 11-1.2 1.2 1.2 1.2 0 011.2-1.2zm4.5 5.2a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z', url: 'https://instagram.com' },
+    { name: 'LinkedIn', icon: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 2a2 2 0 11-2 2 2 2 0 012-2z', url: 'https://linkedin.com' },
   ];
 
   const usefulLinks = ['Home', 'Project Scope', 'About Us', 'Contact Us', 'Downloads'];
