@@ -4,6 +4,7 @@ import dinukaImage from "../images/dinuka.png";
 import manjithaImage from "../images/manjitha.jpg"; 
 import erandaImage from "../images/eranda.jpg";
 import mayanthaImange from '../images/mayantha.jpg'; 
+import dunishaImage from '../images/dunisha.jpg';
 
 const members = [
   {
@@ -29,7 +30,7 @@ const members = [
   {
     name: "Dunisha Sandeepani",
     role: "Member",
-    image: "",
+    image: dunishaImage,
   },
   {
     name: "Eranda Liyanage",
