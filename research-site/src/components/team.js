@@ -12,7 +12,7 @@ const members = [
     image: dinukaImage,
   },
   {
-    name: "Ms. Chathushka",
+    name: "Ms. Chathushki Chathumali",
     role: "Co-Supervisor",
     image: "",
   },
