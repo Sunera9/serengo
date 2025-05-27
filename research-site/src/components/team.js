@@ -2,6 +2,8 @@ import React from "react";
 import { Avatar, Typography, Box } from "@mui/material";
 import dinukaImage from "../images/dinuka.png";
 import manjithaImage from "../images/manjitha.jpg"; 
+import erandaImage from "../images/eranda.jpg";
+import mayanthaImange from '../images/mayantha.jpg'; 
 
 const members = [
   {
@@ -17,7 +19,7 @@ const members = [
   {
     name: "Mayantha Bsnayaka​",
     role: "Group Leader",
-    image: "",
+    image: mayanthaImange,
   },
   {
     name: "Manjitha Kumarasinghe",
@@ -32,7 +34,7 @@ const members = [
   {
     name: "Eranda Liyanage",
     role: "Member",
-    image: "",
+    image: erandaImage,
   },
 ];
 
