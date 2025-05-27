@@ -16,7 +16,7 @@ const LiteratureReviewCards = () => {
     {
       icon: "🍽️",
       title: "Food Tourism Challenges",
-      stat: "32%",
+      stat: "89%",
       description:
         "of tourists avoid local cuisine due to taste preferences and health concerns",
       color: "linear-gradient(135deg, #ff6b35 0%, #f7931e 100%)",
