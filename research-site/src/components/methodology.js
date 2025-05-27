@@ -1,4 +1,3 @@
-// MethodologySection.jsx
 import React from "react";
 import {
   Box,
@@ -77,15 +76,17 @@ const StyledImageContainer = styled(Box)(({ theme }) => ({
   borderRadius: theme.spacing(2),
   overflow: "hidden",
   cursor: "pointer",
+  maxWidth: "100%",
 }));
 
 const StyledImage = styled("img")(({ theme }) => ({
-  height: "700px",
-  width: "900px",
+  maxWidth: "80%",
+  height: "auto",
   borderRadius: theme.spacing(2),
   transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
   boxShadow: `0 20px 40px -15px ${theme.palette.common.black}30`,
-  alignSelf: "center",
+  display: "block",
+  margin: "0 auto",
 }));
 
 const TechChip = styled(Chip)(({ theme }) => ({
@@ -163,7 +164,7 @@ const MethodologySection = () => {
                       Methodology
                     </Typography>
                   </Box>
-                  
+
                   {/* Technology Tags */}
                   <Box sx={{ mb: 3 }}>
                     {technologies.map((tech, index) => (
@@ -172,8 +173,8 @@ const MethodologySection = () => {
                         label={tech}
                         size="small"
                         icon={
-                          index < 2 ? <ModelTraining /> : 
-                          index < 4 ? <DatasetOutlined /> : 
+                          index < 2 ? <ModelTraining /> :
+                          index < 4 ? <DatasetOutlined /> :
                           <CloudQueue />
                         }
                       />
@@ -235,24 +236,25 @@ const MethodologySection = () => {
             </Grid>
 
             {/* Image Section */}
-            <Grid item xs={12} md={5}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textAlign: "center",
+              }}
+            >
               <Fade in timeout={1500}>
-                <Box
-                  sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    position: "relative",
-                    zIndex: 1,
-                  }}
-                >
-                  <StyledImageContainer>
-                    <StyledImage
-                      src={methodologyImage}
-                      alt="System Components Diagram"
-                      onError={handleImageError}
-                    />
-                  </StyledImageContainer>
-                </Box>
+                <StyledImageContainer>
+                  <StyledImage
+                    src={methodologyImage}
+                    alt="System Components Diagram"
+                    onError={handleImageError}
+                  />
+                </StyledImageContainer>
               </Fade>
             </Grid>
           </Grid>
