@@ -12,10 +12,11 @@ import ResearchObjectives from "./components/objectives";
 import MethodologySection from "./components/methodology";
 import TechnologiesSection from "./components/tech"
 import "./App.css";
-
+import Navbar from "./components/navbar";
 function App() {
   return (
     <>
+      <Navbar/>
       <Hero />
       <LiteratureReview />
       <ProblemsSolutions />
