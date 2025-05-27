@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 
 const documents = [
-  { title: "Topic Assessment", type: "Document", file: "https://drive.google.com/file/d/1abcDEFghiJKLmnOPQqrSTuv/view?usp=sharing" },
-  { title: "Project Charter", type: "Document" },
-  { title: "Project Proposal", type: "Document" },
-  { title: "Project Proposal PPT", type: "Presentation" },
-  { title: "Progress Presentation I", type: "Presentation" },
-  { title: "Status Documents I", type: "Document" },
-  { title: "Progress Presentation II", type: "Presentation" },
-  { title: "Status Documents II", type: "Document" },
-  { title: "Research Paper", type: "Document" },
-  { title: "Final Report", type: "Document" },
-  { title: "Log Book", type: "Document" },
+  { title: "Project Charter", type: "Document",file: "https://drive.google.com/drive/u/2/folders/1sntDi7R2_LcioHigrKU5yOp3f0ueq2IX"  },
+  { title: "Project Proposal", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1V6csEt7xKGWgYN9r3a9tn6zophvQBiz8"  },
+  { title: "Project Proposal", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/15Hn2DWcyia1HyXq-8r1C3LWBC6u4FD94"  },
+  { title: "Progress Presentation I", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/11oJMTFJ4v75EUxdflm7sx0SICTXjM4cX"  },
+  { title: "Progress Presentation II", type: "Presentation", file: "https://drive.google.com/drive/u/2/folders/17x7rVqUMFFmxnnF6_5P56zRKgojIzYDK"  },
+  { title: "Research Paper", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1Cz-vnbA6-UtkRqZk5S8ZjCVEYBpM61r6"  },
+  { title: "Final Report", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1AXdFGI7Kk7jGhc5-q2jTZwffjWcXpyjK"  },
+  { title: "Log Book", type: "Document", file: "https://drive.google.com/drive/u/2/folders/1yQ1UTCvKI6LI5gdlDgMlFaFu7AXoDm2m"  },
 ];
 
 const Downloads = () => {

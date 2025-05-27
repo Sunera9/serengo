@@ -33,7 +33,7 @@ import {
 const milestones = [
   {
     title: "Project Proposal",
-    date: "March 2023",
+    date: "July 2024",
     desc: "A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.",
     marks: 6,
     icon: <Assignment />,
@@ -42,7 +42,7 @@ const milestones = [
   },
   {
     title: "Progress Presentation I",
-    date: "May 2023",
+    date: "December 2024",
     desc: "Progress Presentation I reviews the 50% completion status of the project. This reveals any gaps or inconsistencies in the design/requirements.",
     marks: 6,
     icon: <People />,
@@ -51,7 +51,7 @@ const milestones = [
   },
   {
     title: "Research Paper",
-    date: "June 2023",
+    date: "january 2025",
     desc: "Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge.",
     marks: 6,
     icon: <MenuBook />,
@@ -60,7 +60,7 @@ const milestones = [
   },
   {
     title: "Progress Presentation II",
-    date: "Sept 2023",
+    date: "March 2025",
     desc: "Progress Presentation II reviews the 90% completion status demonstration of the project. Along with a Poster presentation which describes the project as a whole.",
     marks: 8,
     icon: <People />,
@@ -68,8 +68,8 @@ const milestones = [
     bgColor: "#fbe9e7",
   },
   {
-    title: "Research Logbook",
-    date: "Nov 2023",
+    title: "Final Report",
+    date: "April 2025",
     desc: "Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.",
     marks: 4,
     icon: <CalendarToday />,
@@ -78,7 +78,7 @@ const milestones = [
   },
   {
     title: "Final Presentation & Viva",
-    date: "Dec 2023",
+    date: "May 2025",
     desc: "Viva is held individually to assess each member's contribution to the project.",
     marks: 10,
     icon: <EmojiEvents />,

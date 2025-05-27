@@ -22,7 +22,6 @@ function App() {
       <ResearchObjectives/>
       <MethodologySection/>
       <TechnologiesSection/>
-      <About />
       <Milestones />
       <Downloads />
       <Team />
