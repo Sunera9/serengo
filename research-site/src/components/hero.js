@@ -47,9 +47,8 @@ export default function Hero() {
             "radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)",
           borderRadius: "50%",
           animation: "float 8s ease-in-out infinite",
-          transform: `translate(${mousePosition.x * 0.02}px, ${
-            mousePosition.y * 0.02
-          }px)`,
+          transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02
+            }px)`,
         }}
       />
 
@@ -64,9 +63,8 @@ export default function Hero() {
             "radial-gradient(circle, rgba(255,182,193,0.15) 0%, transparent 70%)",
           borderRadius: "50%",
           animation: "float 6s ease-in-out infinite reverse",
-          transform: `translate(${mousePosition.x * -0.01}px, ${
-            mousePosition.y * -0.01
-          }px)`,
+          transform: `translate(${mousePosition.x * -0.01}px, ${mousePosition.y * -0.01
+            }px)`,
         }}
       />
 
@@ -81,9 +79,8 @@ export default function Hero() {
             "radial-gradient(circle, rgba(173,216,230,0.2) 0%, transparent 70%)",
           borderRadius: "50%",
           animation: "pulse 4s ease-in-out infinite",
-          transform: `translate(${mousePosition.x * 0.015}px, ${
-            mousePosition.y * 0.015
-          }px)`,
+          transform: `translate(${mousePosition.x * 0.015}px, ${mousePosition.y * 0.015
+            }px)`,
         }}
       />
 

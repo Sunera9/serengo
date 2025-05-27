@@ -1,6 +1,6 @@
 // MethodologySection.jsx
 import React from "react";
-import methodologyImage from "../images/systemcomponents.jpg"; 
+import methodologyImage from "../images/systemcomponents.jpg";
 
 const MethodologySection = () => {
   const styles = {

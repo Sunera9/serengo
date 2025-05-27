@@ -99,73 +99,73 @@ const ContactUs = () => {
           </Box>
         </Fade>
 
-<Grid container spacing={4} mb={6} justifyContent="center" alignItems="stretch">
-  <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
-    <Card
-      sx={{
-        ...contactInfoStyle,
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}
-      onMouseEnter={() => setHoveredCard('location')}
-      onMouseLeave={() => setHoveredCard(null)}
-    >
-      <CardContent sx={{ p: 3 }}>
-        <Box sx={iconStyle}>
-          <LocationOnIcon
-            sx={{
-              fontSize: 28,
-              transform: hoveredCard === 'location' ? 'scale(1.1)' : 'scale(1)',
-            }}
-          />
-        </Box>
-        <Typography variant="h6" fontWeight="600" mb={1}>
-          Our Location
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          SLIIT Malabe Campus<br />
-          New Kandy Rd, Malabe<br />
-          Sri Lanka
-        </Typography>
-      </CardContent>
-    </Card>
-  </Grid>
+        <Grid container spacing={4} mb={6} justifyContent="center" alignItems="stretch">
+          <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+            <Card
+              sx={{
+                ...contactInfoStyle,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
+              }}
+              onMouseEnter={() => setHoveredCard('location')}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={iconStyle}>
+                  <LocationOnIcon
+                    sx={{
+                      fontSize: 28,
+                      transform: hoveredCard === 'location' ? 'scale(1.1)' : 'scale(1)',
+                    }}
+                  />
+                </Box>
+                <Typography variant="h6" fontWeight="600" mb={1}>
+                  Our Location
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  SLIIT Malabe Campus<br />
+                  New Kandy Rd, Malabe<br />
+                  Sri Lanka
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
 
-  <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
-    <Card
-      sx={{
-        ...contactInfoStyle,
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center'
-      }}
-      onMouseEnter={() => setHoveredCard('email')}
-      onMouseLeave={() => setHoveredCard(null)}
-    >
-      <CardContent sx={{ p: 3 }}>
-        <Box sx={iconStyle}>
-          <EmailIcon
-            sx={{
-              fontSize: 28,
-              transform: hoveredCard === 'email' ? 'scale(1.1)' : 'scale(1)',
-            }}
-          />
-        </Box>
-        <Typography variant="h6" fontWeight="600" mb={1}>
-          Email Us
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          serengo.research@gmail.com
-        </Typography>
-      </CardContent>
-    </Card>
-  </Grid>
-</Grid>
+          <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
+            <Card
+              sx={{
+                ...contactInfoStyle,
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center'
+              }}
+              onMouseEnter={() => setHoveredCard('email')}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={iconStyle}>
+                  <EmailIcon
+                    sx={{
+                      fontSize: 28,
+                      transform: hoveredCard === 'email' ? 'scale(1.1)' : 'scale(1)',
+                    }}
+                  />
+                </Box>
+                <Typography variant="h6" fontWeight="600" mb={1}>
+                  Email Us
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  serengo.research@gmail.com
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
 
 
 

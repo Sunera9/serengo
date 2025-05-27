@@ -1,9 +1,9 @@
 import React from "react";
 import { Avatar, Typography, Box } from "@mui/material";
 import dinukaImage from "../images/dinuka.png";
-import manjithaImage from "../images/manjitha.jpg"; 
+import manjithaImage from "../images/manjitha.jpg";
 import erandaImage from "../images/eranda.jpg";
-import mayanthaImange from '../images/mayantha.jpg'; 
+import mayanthaImange from '../images/mayantha.jpg';
 import dunishaImage from '../images/dunisha.jpg';
 
 const members = [
